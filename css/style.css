@@ -1,21 +1,19 @@
 * {
   box-sizing: border-box;
-} 
-
+}
 
 body {
-  font-style: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
   line-height: 1.5;
   margin: 0;
 }
 
 .wrapper {
+  padding: 0 2em;
   max-width: 1200px;
   margin: 0 auto;
-  padding:  0 2em;
 }
-
-
 
 
 #company-name {
@@ -23,24 +21,55 @@ body {
   font-size: 1.5rem;
 }
 
+#hero-banner {
+  height: 60vh;
+  background-color: #7251B5;
+  background-image: url(../images/ice-cream-cones.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
 
 #intro,
 #fan-fav,
 #team {
-  padding: 4em 0 ;
+  padding: 4em 0;
 }
 
 
+/*Intro styles*/
+#intro {
+  background-color: #7251B5;
+}
+
+#intro p {
+  max-width: 50%;
+}
+
+
+/*Header styles*/
 #header {
   background-color: black;
 }
 
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
-/* Start of navigation Links */
+/*Navigation styles*/
 nav ul {
   padding-left: 0;
   list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  padding-left: 1.125em;
 }
 
 nav ul li a:link,
@@ -51,16 +80,72 @@ nav ul li a:visited {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: white;
+  color: #fff;
 }
-/* End of navigation Links */
 
 
-#hero-banner {
-  height: 60vh;
+/*fan-fav styles*/
+#fan-fav {
+  background-color: black;
+  color: #DEC9E9;
+}
+
+#fan-fav ol {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#fan-fav li {
+  padding-right: 15%;
+  width: 50%;
+}
+
+
+/*Team styles*/
+#team {
   background-color: #7251B5;
-  background-image: url(../images/ice-cream-cones.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+#team h2,
+#team .team-intro {
+  max-width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  margin-top: 2.5em;
+  grid-template-columns: 1fr 1fr; /*fractional units*/
+  gap: 1em;
+}
+
+.team-grid article {
+  background-color: #6647a6;
+  border-radius: 20px;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.team-grid article img {
+  width: 80px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.team-grid h3 {
+  text-transform: uppercase;
+}
+
+.team-grid p {
+  margin-top: .25em;
+}
+
+
+/*footer styles*/
+footer {
+  background-color: black;
+  text-align: center;
 }
